@@ -89,6 +89,12 @@ const products = [
         price: 220,
         typeStock: 3,
       },
+      {
+        _typeId: 3,
+        weight: 300,
+        price: 87,
+        typeStock: 3,
+      },
     ],
     rating: 4.5,
     numReviews: 5,

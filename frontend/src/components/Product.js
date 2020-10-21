@@ -20,7 +20,13 @@ const Product = (props) => {
             text={`${props.product.numReviews} reviews`}
           />
         </Card.Text>
-        <Card.Text as='h3'>${props.product.type.map((t) => t.price)}</Card.Text>
+        <Card.Text as='h3'>
+          <p className='spcs-text'>{props.product.type[1] ? 'Desde: ' : ''}</p>
+          {`$${props.product.type.reduce(
+            (min, t) => (t.price < min ? t.price : min),
+            props.product.type[0].price
+          )}`}
+        </Card.Text>
       </Card.Body>
     </Card>
   );
