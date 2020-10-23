@@ -10,7 +10,7 @@ const ProductScreen = (props) => {
   return (
     <>
       <Link className='btn btn-dark my-3' to='/'>
-        Go Back
+        Volver
       </Link>
       <Row>
         <Col md={6}>
