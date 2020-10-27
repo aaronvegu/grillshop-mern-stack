@@ -5,17 +5,20 @@ import Rating from '../components/Rating';
 import axios from 'axios';
 
 const ProductScreen = ({ match }) => {
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState(null);
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const { data } = await axios.get(`/api/products/${match.params.id}`);
+      const product = await axios.get(`/api/products/${match.params.id}`);
 
-      setProduct(data);
+      setProduct(product.data);
     };
 
     fetchProduct();
   }, [match]);
+
+  // render nothing during the time product is loading
+  if (!product) return null;
 
   return (
     <>
@@ -59,17 +62,13 @@ const ProductScreen = ({ match }) => {
                   <Col>Status:</Col>
                   <Col>
                     {product.type[0].typeStock > 0
-                      ? 'En Existencia'
+                      ? 'En existencia'
                       : 'Agotado'}
                   </Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
-                <Button
-                  className='btn-block'
-                  type='button'
-                  disabled={product.type[0].typeStock === 0}
-                >
+                <Button className='btn-block' type='button' disabled>
                   Agregar al carrito
                 </Button>
               </ListGroup.Item>

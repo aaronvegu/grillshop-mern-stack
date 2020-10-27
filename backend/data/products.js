@@ -37,7 +37,7 @@ const products = [
         _typeId: 1,
         weight: 720,
         price: 210,
-        typeStock: 3,
+        typeStock: 0,
       },
     ],
     rating: 4.0,
