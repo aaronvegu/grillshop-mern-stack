@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: '1',
     name: 'New York',
     image: '/images/bone-in-steak.jpg',
     description:
@@ -25,7 +24,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: '2',
     name: 'Rib Eye',
     image: '/images/rib-eye.jpg',
     description:
@@ -44,7 +42,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: '3',
     name: 'Aguja',
     image: '/images/steak-oil.jpg',
     description:
@@ -69,7 +66,6 @@ const products = [
     numReviews: 7,
   },
   {
-    _id: '4',
     name: 'Arrachera',
     image: '/images/steak.jpg',
     description:
