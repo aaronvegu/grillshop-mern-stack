@@ -22,11 +22,12 @@ const Product = (props) => {
           />
         </Card.Text>
         <Card.Text as='h3'>
-          <p className='spcs-text'>{props.product.type[1] ? 'Desde: ' : ''}</p>
+          {/* <p className='spcs-text'>{props.product.type[1] ? 'Desde: ' : ''}</p>
           {`$${props.product.type.reduce(
             (min, t) => (t.price < min ? t.price : min),
             props.product.type[0].price
-          )}`}
+          )}`} */}
+          <p className=''>$100</p>
         </Card.Text>
       </Card.Body>
     </Card>

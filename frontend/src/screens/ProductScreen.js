@@ -40,7 +40,9 @@ const ProductScreen = ({ match }) => {
                 text={`${product.numReviews} reviews`}
               />
             </ListGroup.Item>
-            <ListGroup.Item>Precio: ${product.type[0].price}</ListGroup.Item>
+            <ListGroup.Item>
+              Precio: $100{/*product.type[0].price*/}
+            </ListGroup.Item>
             <ListGroup.Item>
               Descripción: <br /> {product.description}
             </ListGroup.Item>
@@ -53,7 +55,7 @@ const ProductScreen = ({ match }) => {
                 <Row>
                   <Col>Precio:</Col>
                   <Col>
-                    <strong>${product.type[0].price}</strong>
+                    <strong>$100{/*product.type[0].price*/}</strong>
                   </Col>
                 </Row>
               </ListGroup.Item>
@@ -61,18 +63,15 @@ const ProductScreen = ({ match }) => {
                 <Row>
                   <Col>Status:</Col>
                   <Col>
-                    {product.type[0].typeStock > 0
+                    En Existencia
+                    {/*product.type[0].typeStock > 0
                       ? 'En existencia'
-                      : 'Agotado'}
+                    : 'Agotado'*/}
                   </Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
-                <Button
-                  className='btn-block'
-                  type='button'
-                  disabled={product.type[0].typeStock === 0}
-                >
+                <Button className='btn-block' type='button'>
                   Agregar al carrito
                 </Button>
               </ListGroup.Item>
